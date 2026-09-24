@@ -1,0 +1,268 @@
+/* =========================================================
+   IGREJA — SIPB MARINGÁ
+   ========================================================= */
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.igreja-container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   INTRODUÇÃO
+   ========================================================= */
+
+.igreja-intro {
+    padding: 55px 0 50px;
+    background: var(--cor-fundo);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.igreja-label {
+    margin: 0 0 10px;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--verde-principal);
+}
+
+.igreja-intro h1 {
+    max-width: 850px;
+    margin: 0 0 14px;
+
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.15;
+
+    color: var(--cor-texto);
+}
+
+.igreja-texto {
+    max-width: 760px;
+    margin: 0;
+
+    font-size: 1.1rem;
+    line-height: 1.7;
+
+    color: var(--cor-texto-secundario);
+}
+
+
+/* =========================================================
+   SEÇÕES
+   ========================================================= */
+
+.igreja-secao {
+    padding: 55px 0;
+
+    background: var(--cor-fundo);
+}
+
+.igreja-secao + .igreja-secao {
+    border-top: 1px solid var(--cor-borda);
+}
+
+.igreja-secao h2 {
+    margin: 0 0 16px;
+
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    line-height: 1.2;
+
+    color: var(--cor-texto);
+}
+
+.igreja-secao p {
+    max-width: 850px;
+    margin: 0 0 12px;
+
+    font-size: 1rem;
+    line-height: 1.7;
+
+    color: var(--cor-texto-secundario);
+}
+
+.igreja-secao p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   SEÇÃO DESTAQUE
+   ========================================================= */
+
+.igreja-secao-destaque {
+    background: var(--verde-suave);
+}
+
+.igreja-secao-destaque h2 {
+    color: var(--cor-texto);
+}
+
+.igreja-secao-destaque p {
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   VALORES
+   ========================================================= */
+
+.igreja-valores {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px;
+
+    margin-top: 25px;
+}
+
+.igreja-valor {
+    padding: 22px 20px;
+
+    background: var(--cor-fundo);
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 14px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.igreja-valor:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--verde-principal);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.igreja-valor h3 {
+    margin: 0 0 9px;
+
+    font-size: 1.15rem;
+
+    color: var(--cor-texto);
+}
+
+.igreja-valor p {
+    margin: 0;
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   MODO ESCURO
+   ========================================================= */
+
+[data-theme="dark"] .igreja-secao-destaque {
+    background: var(--verde-escuro);
+}
+
+[data-theme="dark"] .igreja-valor:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .igreja-intro {
+        padding: 45px 0;
+    }
+
+    .igreja-secao {
+        padding: 45px 0;
+    }
+
+    .igreja-valores {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .igreja-container {
+        width: min(100% - 32px, 1180px);
+    }
+
+    .igreja-intro {
+        padding: 35px 0 40px;
+    }
+
+    .igreja-label {
+        margin-bottom: 8px;
+    }
+
+    .igreja-intro h1 {
+        margin-bottom: 12px;
+    }
+
+    .igreja-texto {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .igreja-secao {
+        padding: 35px 0;
+    }
+
+    .igreja-secao h2 {
+        margin-bottom: 14px;
+    }
+
+    .igreja-secao p {
+        font-size: 0.98rem;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .igreja-valores {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .igreja-valor {
+        padding: 18px;
+    }
+
+    .igreja-valor h3 {
+        margin-bottom: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .igreja-valor {
+        transition: none;
+    }
+
+}

@@ -1,0 +1,475 @@
+/* =========================================================
+   COMPONENTS — SIPB MARINGÁ
+   ========================================================= */
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background-color: var(--header-fundo);
+    border-bottom: 1px solid var(--cor-borda);
+
+    transition:
+        background-color var(--transicao),
+        border-color var(--transicao),
+        box-shadow var(--transicao);
+}
+
+.site-header.scrolled {
+    box-shadow: var(--sombra-suave);
+}
+
+
+/* =========================================================
+   HEADER — CONTAINER
+   ========================================================= */
+
+.header-container {
+    width: min(var(--largura-conteudo), 90%);
+    min-height: var(--altura-header);
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.site-logo {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.site-logo img {
+    width: 52px;
+    height: 52px;
+
+    object-fit: contain;
+}
+
+.site-logo-text {
+    margin-left: 10px;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    color: var(--header-texto);
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO
+   ========================================================= */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+}
+
+.main-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding: 8px 11px;
+
+    color: var(--header-texto);
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    border-radius: var(--raio-pequeno);
+
+    transition:
+        background-color var(--transicao),
+        color var(--transicao);
+}
+
+.main-nav a:hover {
+    background-color: var(--cor-fundo-secundario);
+}
+
+.main-nav a.active {
+    color: var(--verde-escuro);
+    background-color: var(--cor-fundo-secundario);
+}
+
+[data-theme="dark"] .main-nav a.active {
+    color: var(--verde-claro);
+}
+
+
+/* =========================================================
+   AÇÕES DO HEADER
+   ========================================================= */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   BOTÃO DO TEMA
+   ========================================================= */
+
+.theme-toggle {
+    width: 42px;
+    height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background-color: transparent;
+    color: var(--header-texto);
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 50%;
+
+    font-size: 1.1rem;
+
+    transition:
+        background-color var(--transicao),
+        border-color var(--transicao),
+        transform var(--transicao);
+}
+
+.theme-toggle:hover {
+    background-color: var(--cor-fundo-secundario);
+
+    transform: rotate(8deg);
+}
+
+
+/* =========================================================
+   BOTÃO MENU MOBILE
+   ========================================================= */
+
+.mobile-menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background-color: transparent;
+    color: var(--header-texto);
+
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-pequeno);
+
+    font-size: 1.3rem;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    width: 100%;
+
+    margin-top: 60px;
+
+    padding: 40px 0 20px;
+
+    background-color: var(--cor-fundo-secundario);
+
+    border-top: 1px solid var(--cor-borda);
+
+    transition:
+        background-color var(--transicao),
+        border-color var(--transicao);
+}
+
+.footer-container {
+    width: min(var(--largura-conteudo), 90%);
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   FOOTER — CONTEÚDO
+   ========================================================= */
+
+.footer-content {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 40px;
+}
+
+.footer-column h3 {
+    margin-bottom: 12px;
+
+    font-size: 1rem;
+
+    color: var(--cor-texto);
+}
+
+.footer-column p {
+    margin-bottom: 6px;
+
+    font-size: 0.9rem;
+}
+
+.footer-column a {
+    color: var(--cor-texto-secundario);
+
+    font-size: 0.9rem;
+}
+
+.footer-column a:hover {
+    color: var(--verde-escuro);
+}
+
+[data-theme="dark"] .footer-column a:hover {
+    color: var(--verde-claro);
+}
+
+
+/* =========================================================
+   FOOTER — REDES SOCIAIS
+   ========================================================= */
+
+.footer-social {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 6px 10px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-pequeno);
+
+    transition:
+        background-color var(--transicao),
+        border-color var(--transicao);
+}
+
+.footer-social a:hover {
+    background-color: var(--cor-fundo-card);
+}
+
+
+/* =========================================================
+   ÁREA ADMINISTRATIVA
+   ========================================================= */
+
+.admin-access {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: 12px;
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 0.8rem;
+
+    opacity: 0.8;
+
+    transition:
+        color var(--transicao),
+        opacity var(--transicao);
+}
+
+.admin-access:hover {
+    color: var(--cor-texto);
+    opacity: 1;
+}
+
+
+/* =========================================================
+   FOOTER — COPYRIGHT
+   ========================================================= */
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-top: 35px;
+    padding-top: 20px;
+
+    border-top: 1px solid var(--cor-borda);
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .header-container {
+        gap: 15px;
+    }
+
+    .main-nav {
+        gap: 0;
+    }
+
+    .main-nav a {
+        padding: 8px 7px;
+
+        font-size: 0.82rem;
+    }
+
+    .site-logo-text {
+        font-size: 0.85rem;
+    }
+}
+
+
+/* =========================================================
+   TABLET / CELULAR
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .main-nav {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 15px;
+
+        background-color: var(--header-fundo);
+
+        border-bottom: 1px solid var(--cor-borda);
+
+        box-shadow: var(--sombra-suave);
+    }
+
+    .main-nav.open {
+        display: flex;
+    }
+
+    .main-nav a {
+        width: 100%;
+
+        justify-content: flex-start;
+
+        padding: 12px 15px;
+
+        font-size: 0.95rem;
+    }
+
+    .mobile-menu-toggle {
+        display: inline-flex;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 550px) {
+
+    .header-container {
+        width: 92%;
+    }
+
+    .site-logo img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .site-logo-text {
+        max-width: 170px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        font-size: 0.8rem;
+    }
+
+    .header-actions {
+        gap: 5px;
+    }
+
+    .theme-toggle,
+    .mobile-menu-toggle {
+        width: 38px;
+        height: 38px;
+
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,282 @@
+/* =========================================================
+   GLOBAL — SIPB MARINGÁ
+   ========================================================= */
+
+/* =========================================================
+   VARIÁVEIS
+   ========================================================= */
+
+:root {
+    /* Cores principais da identidade */
+    --verde-escuro: #174d35;
+    --verde-medio: #2f7d57;
+    --verde-claro: #7fba9a;
+
+    /* Tema claro */
+    --cor-fundo: #ffffff;
+    --cor-fundo-secundario: #f5f7f5;
+    --cor-fundo-card: #ffffff;
+
+    --cor-texto: #1c1c1c;
+    --cor-texto-secundario: #5f6361;
+
+    --cor-borda: #dfe5e1;
+
+    /* Header */
+    --header-fundo: #ffffff;
+    --header-texto: #1c1c1c;
+
+    /* Botões */
+    --botao-fundo: var(--verde-escuro);
+    --botao-texto: #ffffff;
+    --botao-hover: #236846;
+
+    /* Sombras */
+    --sombra-suave: 0 4px 18px rgba(0, 0, 0, 0.08);
+
+    /* Dimensões */
+    --largura-conteudo: 1180px;
+    --altura-header: 76px;
+
+    /* Bordas */
+    --raio-pequeno: 6px;
+    --raio-medio: 10px;
+    --raio-grande: 16px;
+
+    /* Transições */
+    --transicao: 0.25s ease;
+}
+
+
+/* =========================================================
+   TEMA ESCURO
+   ========================================================= */
+
+[data-theme="dark"] {
+    --cor-fundo: #101412;
+    --cor-fundo-secundario: #171c19;
+    --cor-fundo-card: #1d2420;
+
+    --cor-texto: #f1f3f1;
+    --cor-texto-secundario: #b7beb9;
+
+    --cor-borda: #303832;
+
+    --header-fundo: #141916;
+    --header-texto: #f1f3f1;
+
+    --botao-fundo: #4f9a72;
+    --botao-texto: #ffffff;
+    --botao-hover: #65ad86;
+
+    --sombra-suave: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HTML / BODY
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    line-height: 1.6;
+
+    transition:
+        background-color var(--transicao),
+        color var(--transicao);
+}
+
+
+/* =========================================================
+   ELEMENTOS GERAIS
+   ========================================================= */
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
+main {
+    width: 100%;
+}
+
+.container {
+    width: min(var(--largura-conteudo), 90%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   TÍTULOS
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+    color: var(--cor-texto);
+}
+
+p {
+    color: var(--cor-texto-secundario);
+}
+
+
+/* =========================================================
+   SEÇÕES
+   ========================================================= */
+
+section {
+    width: 100%;
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+button,
+.btn {
+    border: none;
+    border-radius: var(--raio-medio);
+
+    transition:
+        background-color var(--transicao),
+        color var(--transicao),
+        transform var(--transicao),
+        box-shadow var(--transicao);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 22px;
+
+    background-color: var(--botao-fundo);
+    color: var(--botao-texto);
+
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: var(--botao-hover);
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+    transition:
+        color var(--transicao),
+        opacity var(--transicao);
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE — FOCO
+   ========================================================= */
+
+:focus-visible {
+    outline: 3px solid var(--verde-claro);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   SELEÇÃO DE TEXTO
+   ========================================================= */
+
+::selection {
+    background-color: var(--verde-escuro);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    :root {
+        --altura-header: 68px;
+    }
+
+    .container {
+        width: min(92%, var(--largura-conteudo));
+    }
+
+    body {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   REDUÇÃO DE MOVIMENTO
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

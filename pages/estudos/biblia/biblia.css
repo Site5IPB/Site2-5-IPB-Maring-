@@ -1,0 +1,237 @@
+/* =========================================================
+   BÍBLIA — SIPB MARINGÁ
+   ========================================================= */
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.biblia-container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   INTRODUÇÃO
+   ========================================================= */
+
+.biblia-intro {
+    padding: 55px 0 50px;
+
+    background: var(--cor-fundo);
+
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.biblia-label {
+    margin: 0 0 10px;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--verde-principal);
+}
+
+.biblia-intro h1 {
+    max-width: 850px;
+
+    margin: 0 0 14px;
+
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.15;
+
+    color: var(--cor-texto);
+}
+
+.biblia-texto {
+    max-width: 760px;
+
+    margin: 0;
+
+    font-size: 1.1rem;
+    line-height: 1.7;
+
+    color: var(--cor-texto-secundario);
+}
+
+
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
+.biblia-conteudo {
+    padding: 45px 0 60px;
+
+    background: var(--cor-fundo);
+}
+
+
+/* =========================================================
+   BOTÃO VOLTAR
+   ========================================================= */
+
+.biblia-voltar {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 22px;
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.biblia-voltar:hover {
+    color: var(--verde-principal);
+
+    transform: translateX(-2px);
+}
+
+
+/* =========================================================
+   PAINEL PRINCIPAL
+   ========================================================= */
+
+.biblia-painel {
+    padding: 30px;
+
+    background: var(--cor-fundo);
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.biblia-painel h2 {
+    margin: 0 0 12px;
+
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.2;
+
+    color: var(--cor-texto);
+}
+
+.biblia-painel p {
+    max-width: 800px;
+
+    margin: 0 0 10px;
+
+    font-size: 1rem;
+    line-height: 1.7;
+
+    color: var(--cor-texto-secundario);
+}
+
+.biblia-painel p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   MODO ESCURO
+   ========================================================= */
+
+[data-theme="dark"] .biblia-painel {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .biblia-intro {
+        padding: 45px 0;
+    }
+
+    .biblia-conteudo {
+        padding: 40px 0 50px;
+    }
+
+    .biblia-painel {
+        padding: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .biblia-container {
+        width: min(100% - 32px, 1180px);
+    }
+
+    .biblia-intro {
+        padding: 35px 0 40px;
+    }
+
+    .biblia-label {
+        margin-bottom: 8px;
+    }
+
+    .biblia-intro h1 {
+        margin-bottom: 12px;
+    }
+
+    .biblia-texto {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .biblia-conteudo {
+        padding: 35px 0 45px;
+    }
+
+    .biblia-voltar {
+        margin-bottom: 18px;
+
+        font-size: 0.9rem;
+    }
+
+    .biblia-painel {
+        padding: 20px;
+
+        border-radius: 12px;
+    }
+
+    .biblia-painel h2 {
+        margin-bottom: 10px;
+    }
+
+    .biblia-painel p {
+        font-size: 0.96rem;
+        line-height: 1.6;
+    }
+
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .biblia-voltar {
+        transition: none;
+    }
+
+}

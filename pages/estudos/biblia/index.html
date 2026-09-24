@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Leia a Bíblia na 5ª Igreja Presbiteriana de Maringá."
+    >
+
+    <title>Bíblia — SIPB Maringá</title>
+
+
+    <!-- =====================================================
+         FAVICON
+         ===================================================== -->
+
+    <link
+        rel="icon"
+        type="image/x-icon"
+        href="../../../asssets/logo/ipb.ico"
+    >
+
+
+    <!-- =====================================================
+         CSS GLOBAL
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../../../beckend/css/global.css"
+    >
+
+
+    <!-- =====================================================
+         CSS DOS COMPONENTES
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../../../beckend/css/components.css"
+    >
+
+
+    <!-- =====================================================
+         CSS DA BÍBLIA
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="biblia.css"
+    >
+
+</head>
+
+
+<body data-root="../../../">
+
+
+    <!-- =====================================================
+         CABEÇALHO
+         ===================================================== -->
+
+    <header id="header"></header>
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             INTRODUÇÃO
+             ================================================= -->
+
+        <section class="biblia-intro">
+
+            <div class="biblia-container">
+
+                <p class="biblia-label">
+                    Bíblia
+                </p>
+
+                <h1>
+                    Leia a Palavra de Deus
+                </h1>
+
+                <p class="biblia-texto">
+                    Escolha a versão, o livro e o capítulo
+                    para iniciar sua leitura.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LEITOR
+             ================================================= -->
+
+        <section class="biblia-conteudo">
+
+            <div class="biblia-container">
+
+
+                <!-- VOLTAR -->
+
+                <a
+                    href="../estudos.html"
+                    class="biblia-voltar"
+                >
+                    ← Voltar para Estudos
+                </a>
+
+
+                <!-- =================================================
+                     PAINEL DE CONTROLES
+                     ================================================= -->
+
+                <div class="biblia-controles">
+
+
+                    <!-- VERSÃO -->
+
+                    <div class="biblia-controle">
+
+                        <label
+                            for="biblia-versao"
+                        >
+                            Versão
+                        </label>
+
+                        <select
+                            id="biblia-versao"
+                        >
+
+                            <option value="NAA">
+                                NAA
+                            </option>
+
+                            <option value="ARA">
+                                ARA
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- LIVRO -->
+
+                    <div class="biblia-controle">
+
+                        <label
+                            for="biblia-livro"
+                        >
+                            Livro
+                        </label>
+
+                        <select
+                            id="biblia-livro"
+                        >
+
+                            <option value="">
+                                Selecione o livro
+                            </option>
+
+                            <option value="Gênesis">
+                                Gênesis
+                            </option>
+
+                            <option value="Êxodo">
+                                Êxodo
+                            </option>
+
+                            <option value="Salmos">
+                                Salmos
+                            </option>
+
+                            <option value="Provérbios">
+                                Provérbios
+                            </option>
+
+                            <option value="Isaías">
+                                Isaías
+                            </option>
+
+                            <option value="Mateus">
+                                Mateus
+                            </option>
+
+                            <option value="Marcos">
+                                Marcos
+                            </option>
+
+                            <option value="Lucas">
+                                Lucas
+                            </option>
+
+                            <option value="João">
+                                João
+                            </option>
+
+                            <option value="Atos">
+                                Atos
+                            </option>
+
+                            <option value="Romanos">
+                                Romanos
+                            </option>
+
+                            <option value="1 Coríntios">
+                                1 Coríntios
+                            </option>
+
+                            <option value="2 Coríntios">
+                                2 Coríntios
+                            </option>
+
+                            <option value="Apocalipse">
+                                Apocalipse
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- CAPÍTULO -->
+
+                    <div class="biblia-controle">
+
+                        <label
+                            for="biblia-capitulo"
+                        >
+                            Capítulo
+                        </label>
+
+                        <select
+                            id="biblia-capitulo"
+                        >
+
+                            <option value="1">
+                                1
+                            </option>
+
+                            <option value="2">
+                                2
+                            </option>
+
+                            <option value="3">
+                                3
+                            </option>
+
+                            <option value="4">
+                                4
+                            </option>
+
+                            <option value="5">
+                                5
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- BOTÃO -->
+
+                    <div class="biblia-controle biblia-controle-botao">
+
+                        <button
+                            type="button"
+                            id="biblia-carregar"
+                            class="biblia-botao"
+                        >
+                            Ler capítulo
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     CONTINUAR LEITURA
+                     ================================================= -->
+
+                <div
+                    class="biblia-continuar"
+                    id="biblia-continuar"
+                >
+
+                    <strong>
+                        Continuar de onde você parou
+                    </strong>
+
+                    <span>
+                        Sua última posição aparecerá aqui.
+                    </span>
+
+                </div>
+
+
+                <!-- =================================================
+                     LEITOR
+                     ================================================= -->
+
+                <article
+                    class="biblia-leitor"
+                    id="biblia-leitor"
+                >
+
+                    <div class="biblia-placeholder">
+
+                        <h2>
+                            Comece sua leitura
+                        </h2>
+
+                        <p>
+                            Escolha a versão, o livro e o
+                            capítulo acima.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         RODAPÉ
+         ===================================================== -->
+
+    <footer id="footer"></footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT GLOBAL
+         ===================================================== -->
+
+    <script src="../../../beckend/js/global.js"></script>
+
+
+    <!-- =====================================================
+         JAVASCRIPT DOS COMPONENTES
+         ===================================================== -->
+
+    <script src="../../../beckend/js/components.js"></script>
+
+
+    <!-- =====================================================
+         JAVASCRIPT DA BÍBLIA
+         ===================================================== -->
+
+    <script src="biblia.js"></script>
+
+</body>
+
+</html>
